@@ -17,9 +17,12 @@ A great setup tutorial by Simon Monk can be found on [oreilly.com](http://razzpi
 
 For a quick setup you can follow the instructions here:
 
-0. You must have [Flask](http://flask.pocoo.org/) installed on your Pi. Run the following commands on your Pi
-??*`sudo apt-get install python-pip`
-??*`sudo pip install flask`
+You must have [Flask](http://flask.pocoo.org/) installed on your Pi. Run the following commands on your Pi
+
+`sudo apt-get install python-pip`
+
+
+`sudo pip install flask`
 
 1. Connect LED to the breadboard - Long lead in **5e** and short lead in **6e**
 
@@ -28,15 +31,27 @@ For a quick setup you can follow the instructions here:
 3. Connect M-to-F jumper cables from the breadboard to the Pi. Connect one cable from **6a** in the bread board to
 a ground (**GND**) GPIO pin on the Raspberry Pi. Connect the second cable from **1a** on the breadboard to GPIO **18** on the Raspberry Pi.
 **Note: if you are
- connecting to different GPIO pins you will need to change the code in [morse_code_server.py](../morse_code_server.py)**
+ connecting to different GPIO pins you will need to change the code in [morse_code_server.py](morse_code_server.py)**
 
 4. Your Raspberry Pi setup is now finished and can be tested by executing the following commands:
-??*`sudo python`
-??*`import RPi.GPIO as GPIO`
-??*`GPIO.setmode(GPIO.BCM)`
-??*`GPIO.setup(18, GPIO.OUT)`
-??*`GPIO.output(18, True)`
-??*`GPIO.output(18, False)`
+
+
+`sudo python`
+
+
+`import RPi.GPIO as GPIO`
+
+
+`GPIO.setmode(GPIO.BCM)`
+
+
+`GPIO.setup(18, GPIO.OUT)`
+
+
+`GPIO.output(18, True)`
+
+
+`GPIO.output(18, False)`
 
 
 ## Python (Flask) Server Setup
@@ -60,5 +75,5 @@ want to see flash in Morse Code).** After the LED has finished flashing you will
 https://github.com/trevorhalvorson/RPi_LED_Sample
 
 ## Known Issues
-1. Any characters not found in the CODE dictionary in [morse_code_server.py](../morse_code_server.py) will cause an error. If you would like to expand
+1. Any characters not found in the CODE dictionary in [morse_code_server.py](morse_code_server.py) will cause an error. If you would like to expand
 this dictionary please fork this project and send a pull request.
